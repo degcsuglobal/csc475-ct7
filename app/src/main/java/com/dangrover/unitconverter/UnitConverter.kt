@@ -1,10 +1,7 @@
 package com.dangrover.unitconverter
 
-//A class that can convert  between units of length
-// of various kinds.
-
+//A class that can convert between units of length
 class UnitConverter {
-
     enum class Unit(val toMeters: Double) {
         METER(1.0),
         KILOMETER(1000.0),
@@ -16,12 +13,10 @@ class UnitConverter {
         INCH(0.0254)
     }
 
-
     fun convert(value: Double, fromUnit: Unit, toUnit: Unit): Double {
         val meters = value * fromUnit.toMeters
         return meters / toUnit.toMeters
     }
-
 
     fun getUnitAbbreviation(unit: Unit): String {
         return when (unit) {
@@ -35,8 +30,4 @@ class UnitConverter {
             Unit.INCH -> "in"
         }
     }
-
-
-
-
 }

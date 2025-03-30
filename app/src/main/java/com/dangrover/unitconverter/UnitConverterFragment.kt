@@ -15,7 +15,7 @@ import android.widget.ArrayAdapter
 
 
 /**
- * A simple [Fragment] subclass as the default destination in the navigation.
+ * The main UI for the unit converter.
  */
 class UnitConverterFragment : Fragment(), TextWatcher, AdapterView.OnItemSelectedListener {
 
@@ -54,12 +54,10 @@ class UnitConverterFragment : Fragment(), TextWatcher, AdapterView.OnItemSelecte
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         updateConversion()
     }
 
     private fun updateConversion(){
-
         // if either field empty or non-numeric, bail and show empty text in resultDisplayLabel
         if(binding.fromQuantity.text.toString().isEmpty() || binding.fromQuantity.text.toString().toDoubleOrNull() == null) {
             binding.resultDisplayLabel.text = ""
