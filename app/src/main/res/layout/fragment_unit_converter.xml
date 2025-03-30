@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnitConverterFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+
+
+        <LinearLayout
+            android:id="@+id/fromRow"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fromRowLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="Convert:" />
+
+            <EditText
+                android:id="@+id/fromQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <Spinner
+                android:id="@+id/fromUnitSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/toRow"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/toRowLabel"
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="to:" />
+
+            <EditText
+                android:id="@+id/toQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <Spinner
+                android:id="@+id/toUnitSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/resultLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result:" />
+
+        <TextView
+            android:id="@+id/resultDisplayLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="43 feet"
+            android:textSize="36dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
