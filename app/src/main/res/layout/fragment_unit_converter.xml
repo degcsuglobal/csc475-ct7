@@ -57,14 +57,6 @@
                 android:gravity="center"
                 android:text="to:" />
 
-            <EditText
-                android:id="@+id/toQuantity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:ems="10"
-                android:inputType="numberDecimal" />
-
             <Spinner
                 android:id="@+id/toUnitSpinner"
                 android:layout_width="match_parent"
